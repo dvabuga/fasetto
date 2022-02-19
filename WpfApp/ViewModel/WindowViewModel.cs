@@ -3,6 +3,7 @@ using System;
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Input;
+using WpfApp.DataModels;
 
 namespace WpfApp.ViewModel
 {
@@ -120,6 +121,11 @@ namespace WpfApp.ViewModel
         /// </summary>
         public int TitleHeight { get; set; } = 42;
         public GridLength TitleHeightGridLength { get { return new GridLength(TitleHeight + ResizeBorder); } }
+
+        /// <summary>
+        /// The current page of the application
+        /// </summary>
+        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Login;
 
         #endregion
 
